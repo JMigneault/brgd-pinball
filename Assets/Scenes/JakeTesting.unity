@@ -417,8 +417,8 @@ GameObject:
   - component: {fileID: 710552025}
   - component: {fileID: 710552024}
   - component: {fileID: 710552023}
-  - component: {fileID: 710552022}
   - component: {fileID: 710552021}
+  - component: {fileID: 710552022}
   m_Layer: 0
   m_Name: RightFlipper
   m_TagString: Untagged
@@ -441,8 +441,8 @@ MonoBehaviour:
   bumperSpeed: 1000
   upDirection: 1
   key: 101
---- !u!61 &710552022
-BoxCollider2D:
+--- !u!70 &710552022
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -455,18 +455,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Direction: 1
 --- !u!233 &710552023
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -807,8 +797,8 @@ GameObject:
   - component: {fileID: 1838229124}
   - component: {fileID: 1838229123}
   - component: {fileID: 1838229122}
-  - component: {fileID: 1838229121}
   - component: {fileID: 1838229126}
+  - component: {fileID: 1838229121}
   m_Layer: 0
   m_Name: Left Flipper
   m_TagString: Untagged
@@ -816,8 +806,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1838229121
-BoxCollider2D:
+--- !u!70 &1838229121
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -830,18 +820,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Direction: 1
 --- !u!233 &1838229122
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1044,7 +1024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132258246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7, y: -29.8, z: 0}
+  m_LocalPosition: {x: -1.7, y: -30.33, z: 0}
   m_LocalScale: {x: 50, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
