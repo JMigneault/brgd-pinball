@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LivesTracker : MonoBehaviour
 {
@@ -26,5 +27,9 @@ public class LivesTracker : MonoBehaviour
         return remainingLives;
 
     }
-    
+
+    public int GetLives() {
+        return remainingLives;
+    }
+
 }
