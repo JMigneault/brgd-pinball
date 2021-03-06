@@ -11,5 +11,9 @@ public class PointTracker : MonoBehaviour
         Debug.Log("current points:" + points);
     }
 
+    public int GetPoints() {
+        return points;
+    }
+
 }
 

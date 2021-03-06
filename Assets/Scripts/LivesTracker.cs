@@ -1,23 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LivesTracker : MonoBehaviour
 {
 
-    public int lives;
-    public GameObject pinballPrefab;
+    public int startingLives;
     private int remainingLives;
 
-    public void loseLife() {
-        if (lives-- == 0) {
-            // TODO: you lose :(
-            Debug.Log("YOU LOSE!");
-        } else {
-            Debug.Log("lives remaining" + lives);
-            Object.Instantiate(pinballPrefab);
+    void Start() {
+        remainingLives = startingLives;
+        Debug.Log("setting remaining lives in start");
+    }
+
+    public int LoseLife() {
+        if (remainingLives > 0) {
+            remainingLives--;
+            if (remainingLives == 0) {
+                // TODO: you lose :(
+                Debug.Log("YOU LOSE!");
+            } else {
+                Debug.Log("lives remaining: " + remainingLives);
+            }
         }
+        return remainingLives;
 
     }
-    
+
+    public int GetLives() {
+        return remainingLives;
+    }
+
 }
