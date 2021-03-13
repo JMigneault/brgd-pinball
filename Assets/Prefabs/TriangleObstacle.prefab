@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0360823b572c51d4f94272b16f05c9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracker: {fileID: 4711189899519841123, guid: b3712baa5aeb6422598189ddec6caefd, type: 3}
+  tracker: {fileID: 0}
   pointValue: 1
 --- !u!60 &8576958940732044438
 PolygonCollider2D:
