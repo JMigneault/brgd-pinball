@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public LivesTracker tracker;
-    public int health;
+    private int health;
     private int maxHealth;
     public Image[] hearts;
     public Sprite fullHeart;
@@ -15,7 +15,6 @@ public class Health : MonoBehaviour
     void Start()
     {
         maxHealth = tracker.GetLives();
-        Debug.Log(maxHealth);
     }
 
     // Update is called once per frame
