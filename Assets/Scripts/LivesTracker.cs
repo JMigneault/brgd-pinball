@@ -9,6 +9,8 @@ public class LivesTracker : MonoBehaviour
     public int startingLives;
     private int remainingLives;
 
+    public RoundTracker roundTracker;
+
     void Start() {
         remainingLives = startingLives;
         Debug.Log("setting remaining lives in start");
@@ -22,6 +24,7 @@ public class LivesTracker : MonoBehaviour
                 Debug.Log("YOU LOSE!");
             } else {
                 Debug.Log("lives remaining: " + remainingLives);
+                roundTracker.NextRound();
             }
         }
         return remainingLives;
