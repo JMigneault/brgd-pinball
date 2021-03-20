@@ -8,7 +8,7 @@ public class PointTracker : MonoBehaviour
 
     public void AddPoints(int newPoints) {
         this.points += newPoints;
-        Debug.Log("current points:" + points);
+        Debug.Log("current points:" + points + gameObject.name);
     }
 
     public int GetPoints() {

@@ -16,6 +16,7 @@ public class Pinball : MonoBehaviour
     }
 
     public void Reset() {
+        Debug.Log("Called into Pinball");
         // position = startingPosition;
         this.transform.position = startingPosition;
         // velocity = 0;
