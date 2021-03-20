@@ -11,7 +11,7 @@ public class DeathRegion : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider) {
         Debug.Log("Hit death region");
         int remainingLives = tracker.LoseLife();
-        mood.ShowMood();
+        //mood.ShowMood();
         if (remainingLives > 0) {
             collider.GetComponent<Pinball>().Reset();
         }

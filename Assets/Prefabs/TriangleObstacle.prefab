@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1109312114096705875}
   - component: {fileID: 5296521868219515474}
-  - component: {fileID: 1412163652742764405}
   - component: {fileID: 8576958940732044438}
   m_Layer: 0
   m_Name: TriangleObstacle
@@ -84,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1412163652742764405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8833619879260500288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0360823b572c51d4f94272b16f05c9e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tracker: {fileID: 0}
-  pointValue: 1
 --- !u!60 &8576958940732044438
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -107,7 +92,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 8833619879260500288}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3ef7080b5bec046aa8da4bc5ac99415f, type: 2}
+  m_Material: {fileID: 6200000, guid: 29ed1fe9ea96607459e249857c4182ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

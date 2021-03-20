@@ -1746,30 +1746,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7431360277160720341, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
-      propertyPath: m_Anchor.x
-      value: -0.40287626
-      objectReference: {fileID: 0}
-    - target: {fileID: 7431360277160720341, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
-      propertyPath: m_Anchor.y
-      value: 0.012619019
-      objectReference: {fileID: 0}
-    - target: {fileID: 7431360277160720341, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.9328762
-      objectReference: {fileID: 0}
-    - target: {fileID: 7431360277160720341, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -4.047381
-      objectReference: {fileID: 0}
-    - target: {fileID: 7431360277160720341, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7431360277160720341, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: -15
-      objectReference: {fileID: 0}
     - target: {fileID: 7431360277160720342, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
       propertyPath: m_Name
       value: RightFlipper
@@ -1777,10 +1753,6 @@ PrefabInstance:
     - target: {fileID: 7431360277160720344, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7431360277160720344, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7431360277160720344, guid: b9fea0964c87d1e41b0b81b9613c1522, type: 3}
       propertyPath: m_LocalPosition.x
