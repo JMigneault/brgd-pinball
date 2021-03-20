@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1767010728791550201}
   - component: {fileID: 4496168305838892373}
   - component: {fileID: 3036203274270088215}
+  - component: {fileID: -1967043034325767239}
   m_Layer: 0
   m_Name: RectangleObstacle
   m_TagString: Untagged
@@ -168,3 +169,15 @@ PolygonCollider2D:
       - {x: 0.083749995, y: -0.71625}
       - {x: 0.13125, y: -0.70875}
       - {x: 0.16125, y: -0.70124996}
+--- !u!114 &-1967043034325767239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726809591110139691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda7efa40d0454c8a80c6896d1fc403e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
