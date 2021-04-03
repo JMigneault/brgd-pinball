@@ -7,24 +7,22 @@ public class MoodDisplay : MonoBehaviour
 {
     public PointTracker tracker;
     public Text mood_text;
-    private int points;
+
     // Start is called before the first frame update
     void Start()
     {
-        points = tracker.GetPoints();
         mood_text = GetComponent<Text>();
         mood_text.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
-    public void ShowMood() {
+    public void ShowMood(int points) {
         // display mood
         mood_text.gameObject.SetActive(true);
-        StartCoroutine(DisplayMessage());
+        StartCoroutine(DisplayMessage(points));
     }
 
-    IEnumerator DisplayMessage () {
-        points = tracker.GetPoints();
+    IEnumerator DisplayMessage (int points) {
         // set mood
         if (points < 5) {
             mood_text.text = "Mood: Bummed";
