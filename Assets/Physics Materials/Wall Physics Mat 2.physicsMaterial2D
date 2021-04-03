@@ -6,6 +6,6 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: No Bounce Wall
-  friction: 0.1
-  bounciness: 0.2
+  m_Name: Wall Physics Mat 2
+  friction: 0.8
+  bounciness: 0.8

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3708981958719407034}
   - component: {fileID: 3708981958719407033}
   - component: {fileID: 5450361332384227812}
+  - component: {fileID: -4545546433027562347}
   m_Layer: 0
   m_Name: CircleObstacle
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2874307125538887702, guid: 35a13a713be354686bb5e452ccbd8f4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c03cb6ef1b00457ca88c10351cc0055, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,3 +115,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tracker: {fileID: 0}
   pointValue: 1
+--- !u!114 &-4545546433027562347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708981958719407032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda7efa40d0454c8a80c6896d1fc403e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
