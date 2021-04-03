@@ -10,8 +10,10 @@ public class LivesTracker : MonoBehaviour
     private int remainingLives;
 
     public RoundTracker roundTracker;
+    private PointTracker pointTracker;
 
     void Start() {
+        pointTracker = GetComponent<PointTracker>();
         remainingLives = startingLives;
         Debug.Log("setting remaining lives in start");
     }
@@ -22,6 +24,9 @@ public class LivesTracker : MonoBehaviour
             if (remainingLives == 0) {
                 // TODO: you lose :(
                 Debug.Log("YOU LOSE!");
+                // this is so that points for final round are added to cumulative count, lots of other ways we could do this
+                pointTracker.ResetPoints();
+                Debug.Log(pointTracker.GetCumulativePoints());
             } else {
                 Debug.Log("lives remaining: " + remainingLives);
                 roundTracker.NextRound();
