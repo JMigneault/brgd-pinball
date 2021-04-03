@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -247996242125104783, guid: 7ae2e8bdfaaec894f9c1d7ed24065f88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67e44b75d563d4f9e9355286c9cdef62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +122,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.44, y: 0.000000004768367}
-  m_ConnectedAnchor: {x: -1.49, y: -4.06}
+  m_ConnectedAnchor: {x: -1.49, y: -4.03}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -164,7 +164,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3075, y: 0.5175}
+    oldSize: {x: 1.25, y: 1.25}
     newSize: {x: 5.23, y: 2.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
