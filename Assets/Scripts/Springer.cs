@@ -47,9 +47,10 @@ public class Springer : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D collidedObject)
+    void OnTriggerStay2D(Collider2D collidedObject)
     {
         if (collidedObject.gameObject.tag == "Pinball" && Input.GetKey("w")) {
+            print("ball registered!");
             pinballBody.AddForce(Vector3.up * launchForce, ForceMode2D.Impulse);
         }
     }
