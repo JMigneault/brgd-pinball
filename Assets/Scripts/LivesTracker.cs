@@ -9,11 +9,12 @@ public class LivesTracker : MonoBehaviour
     public int startingLives;
     private int remainingLives;
 
-    public RoundTracker roundTracker;
+    private RoundTracker roundTracker;
     private PointTracker pointTracker;
 
     void Start() {
         pointTracker = GetComponent<PointTracker>();
+        roundTracker = GetComponent<RoundTracker>();
         remainingLives = startingLives;
         Debug.Log("setting remaining lives in start");
     }

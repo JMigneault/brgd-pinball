@@ -6,7 +6,7 @@ public class RoundTracker : MonoBehaviour
 {
 
     public MoveBumper[] moveBumpers;
-    public PointTracker pointTracker;
+    private PointTracker pointTracker;
     public MoodDisplay moodDisplay;
 
     public int[] movesPerRound;
@@ -14,6 +14,7 @@ public class RoundTracker : MonoBehaviour
     private int currentRound = 0;
 
     void Start() {
+        pointTracker = GetComponent<PointTracker>();
         foreach (MoveBumper bumper in moveBumpers) {
             bumper.movesLeft = movesPerRound[currentRound];
         }
