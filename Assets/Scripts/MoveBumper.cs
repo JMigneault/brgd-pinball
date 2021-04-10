@@ -7,6 +7,7 @@ public class MoveBumper : MonoBehaviour
 
     HingeJoint2D joint;
     JointMotor2D motor;
+    AudioSource audioSource;
 
     public float bumperSpeed;
     public int upDirection;
@@ -18,6 +19,7 @@ public class MoveBumper : MonoBehaviour
     void Start()
     {
         joint = GetComponent<HingeJoint2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -25,6 +27,7 @@ public class MoveBumper : MonoBehaviour
         if (Input.GetKeyDown(key) && movesLeft > 0) {
             movesLeft--;
             Debug.Log(movesLeft + " moves left on bumper: " + gameObject.name);
+            audioSource.Play();
         }
 
         if (Input.GetKey(key) && movesLeft > 0) {

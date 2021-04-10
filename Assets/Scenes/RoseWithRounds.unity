@@ -1723,6 +1723,10 @@ PrefabInstance:
       propertyPath: tracker
       value: 
       objectReference: {fileID: 340861237}
+    - target: {fileID: 8217649358526636014, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b0700835f390c4e99b8cc479c09ff53b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
 --- !u!4 &149354178 stripped
@@ -3740,6 +3744,10 @@ PrefabInstance:
       propertyPath: tracker
       value: 
       objectReference: {fileID: 340861237}
+    - target: {fileID: 8217649358526636014, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b0700835f390c4e99b8cc479c09ff53b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
 --- !u!4 &349918088 stripped
@@ -6375,6 +6383,10 @@ PrefabInstance:
       propertyPath: tracker
       value: 
       objectReference: {fileID: 340861237}
+    - target: {fileID: 8217649358526636014, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b0700835f390c4e99b8cc479c09ff53b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
 --- !u!4 &725530357 stripped
@@ -7721,8 +7733,9 @@ GameObject:
   m_Component:
   - component: {fileID: 903473301}
   - component: {fileID: 903473300}
+  - component: {fileID: 903473302}
   m_Layer: 0
-  m_Name: Pet
+  m_Name: Pal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7768,7 +7781,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 698d6754cacd545c99f89916e0a0ccb4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41a5965f3a472439da3f4debbe0bc130, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7793,6 +7806,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &903473302
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903473299}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cc49237f22fa4f94bcaa02f81337a5a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &903478086
 GameObject:
   m_ObjectHideFlags: 0
@@ -12002,6 +12034,10 @@ PrefabInstance:
     - target: {fileID: 2317845486190391073, guid: b7a9b16d4e88b4e4f88a2be69ce89254, type: 3}
       propertyPath: m_Name
       value: North Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317845486190391102, guid: b7a9b16d4e88b4e4f88a2be69ce89254, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2317845486190391103, guid: b7a9b16d4e88b4e4f88a2be69ce89254, type: 3}
       propertyPath: m_RootOrder
@@ -16474,6 +16510,7 @@ GameObject:
   - component: {fileID: 1914926617}
   - component: {fileID: 1914926616}
   - component: {fileID: 1914926615}
+  - component: {fileID: 1914926620}
   m_Layer: 0
   m_Name: Spring
   m_TagString: Launcher
@@ -16635,6 +16672,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1914926620
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914926613}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 08e0583558364401da19561108c3f34b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1923445084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17208,6 +17341,10 @@ PrefabInstance:
       propertyPath: tracker
       value: 
       objectReference: {fileID: 340861237}
+    - target: {fileID: 8217649358526636014, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b0700835f390c4e99b8cc479c09ff53b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
 --- !u!4 &1995216492 stripped
@@ -17906,6 +18043,10 @@ PrefabInstance:
       propertyPath: tracker
       value: 
       objectReference: {fileID: 340861237}
+    - target: {fileID: 8217649358526636014, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b0700835f390c4e99b8cc479c09ff53b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
 --- !u!4 &2073887387 stripped
@@ -18226,6 +18367,10 @@ PrefabInstance:
       propertyPath: tracker
       value: 
       objectReference: {fileID: 340861237}
+    - target: {fileID: 8217649358526636014, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b0700835f390c4e99b8cc479c09ff53b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2af416f0eeba445eac5a9b314ad9772, type: 3}
 --- !u!4 &2092919061 stripped

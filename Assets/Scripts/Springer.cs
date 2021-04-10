@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Springer : MonoBehaviour
 {
+    AudioSource audioSource;
 
     public float launchForce;
     public float downTime, pressTime = 0;
@@ -13,13 +14,11 @@ public class Springer : MonoBehaviour
     private Rigidbody2D pinballBody;
     private bool triggered = false;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
         pinballBody = pinball.GetComponent<Rigidbody2D>();
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,12 +34,14 @@ public class Springer : MonoBehaviour
 
             if (Input.GetKeyUp("w"))
             {
+
                 StopCoroutine(MoveDown());
                 pressTime = Time.time - downTime;
                 pinballBody.AddForce(Vector3.up * launchForce * pressTime * 0.3f, ForceMode2D.Impulse);
                 transform.localPosition = new Vector3(2.5f, -4.475f, 1f);
                 transform.localScale = new Vector3(0.8f, 1f, 1f);
                 triggered = false;
+
             }
         } 
        
@@ -58,6 +59,7 @@ public class Springer : MonoBehaviour
     void OnTriggerExit2D(Collider2D collidedObject)
     {
         triggered = false;
+        audioSource.Play();
     }
 
 
