@@ -21,7 +21,6 @@ public class PointBumper : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if (col.transform.tag == "Pinball") {
-            //CancelInvoke();
             tracker.AddPoints(pointValue);
             audioSource.Play();
             spriteAnimator.SetBool("isHit", true);

@@ -26,13 +26,13 @@ public class Springer : MonoBehaviour
     {
         if (triggered)
         {
-            if (Input.GetKeyDown("w"))
+            if (Input.GetKeyDown("space"))
             {
                 downTime = Time.time;
                 StartCoroutine(MoveDown());
             }
 
-            if (Input.GetKeyUp("w"))
+            if (Input.GetKeyUp("space"))
             {
 
                 StopCoroutine(MoveDown());
@@ -50,7 +50,7 @@ public class Springer : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collidedObject)
     {
-        if (collidedObject.gameObject.tag == "Pinball" && Input.GetKey("w")) {
+        if (collidedObject.gameObject.tag == "Pinball" && Input.GetKey("space")) {
             print("ball registered!");
             pinballBody.AddForce(Vector3.up * launchForce, ForceMode2D.Impulse);
         }
