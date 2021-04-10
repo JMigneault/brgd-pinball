@@ -7035,8 +7035,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracker: {fileID: 340861237}
+  animator: {fileID: 903473302}
   mood_text: {fileID: 779289257}
   pet: {fileID: 903473299}
+  mehThreshold: 15
+  psychedThreshold: 30
   psyched: {fileID: 21300000, guid: 90ae59af646a84ab9bc34e8d97bc481d, type: 3}
   meh: {fileID: 21300000, guid: 6d9ce410bd2d7457b9cf07021917de1f, type: 3}
   bummed: {fileID: 21300000, guid: 698d6754cacd545c99f89916e0a0ccb4, type: 3}
@@ -8222,7 +8225,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903473299}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1cc49237f22fa4f94bcaa02f81337a5a, type: 2}
   m_CullingMode: 0
