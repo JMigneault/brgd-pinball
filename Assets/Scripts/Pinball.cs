@@ -8,6 +8,14 @@ public class Pinball : MonoBehaviour
     AudioSource audioSource;
     Vector2 startingPosition;
     Rigidbody2D rbd;
+    SpriteRenderer spriteRenderer;
+
+    public Sprite breakfast;
+    public Sprite lunch;
+    public Sprite dinner;
+    public Sprite dessert;
+
+    public int round = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +23,8 @@ public class Pinball : MonoBehaviour
         startingPosition = this.transform.position;
         rbd = this.GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     public void Reset() {
@@ -22,6 +32,25 @@ public class Pinball : MonoBehaviour
         // positon = startingPosition;
         this.transform.position = startingPosition;
         rbd.velocity = new Vector3(0, 0, 0);
+        round++;
+
+        if(round == 1)
+        {
+            spriteRenderer.sprite = breakfast;
+        }
+        else if(round == 2)
+        {
+            spriteRenderer.sprite = lunch;
+        }
+        else if(round == 3)
+        {
+            spriteRenderer.sprite = dinner;
+        }
+        else
+        {
+            spriteRenderer.sprite = dessert;
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D col)
