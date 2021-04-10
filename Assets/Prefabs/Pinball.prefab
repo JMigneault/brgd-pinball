@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7126393446432489352, guid: 8c5a81fe80b444f55a8ca43f4b0d7dfb, type: 3}
+  m_Sprite: {fileID: 9167023152008210745, guid: d4ecc91f51e164666b43bdab8503abac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.45, y: 0.44958332}
+  m_Size: {x: 0.45, y: 0.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -149,6 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b75995a9ebce14a8c8a11d193c6eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakfast: {fileID: 9167023152008210745, guid: d4ecc91f51e164666b43bdab8503abac, type: 3}
+  lunch: {fileID: 7126393446432489352, guid: 8c5a81fe80b444f55a8ca43f4b0d7dfb, type: 3}
+  dinner: {fileID: 7741110244864103412, guid: adc8b56c134cf404b9b3deea40c1463f, type: 3}
+  dessert: {fileID: -3566123337590190104, guid: 41c2fed6c3fd44d4885fc03843276ef4, type: 3}
+  round: 1
 --- !u!82 &3716442862257310491
 AudioSource:
   m_ObjectHideFlags: 0

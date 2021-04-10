@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoveBumper : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MoveBumper : MonoBehaviour
     public float bumperSpeed;
     public int upDirection;
     public KeyCode key;
+    public Text usesText; 
 
     public int movesLeft = 10;
 
@@ -20,13 +22,15 @@ public class MoveBumper : MonoBehaviour
     {
         joint = GetComponent<HingeJoint2D>();
         audioSource = GetComponent<AudioSource>();
+        usesText.text = movesLeft.ToString();
     }
 
     void Update() {
 
         if (Input.GetKeyDown(key) && movesLeft > 0) {
             movesLeft--;
-            Debug.Log(movesLeft + " moves left on bumper: " + gameObject.name);
+            usesText.text = movesLeft.ToString();
+            //Debug.Log(movesLeft + " moves left on bumper: " + gameObject.name);
             audioSource.Play();
         }
 
