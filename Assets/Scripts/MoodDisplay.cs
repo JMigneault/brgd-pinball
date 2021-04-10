@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class MoodDisplay : MonoBehaviour
 {
     public PointTracker tracker;
+    public Animator animator;
     public Text mood_text;
     public GameObject pet;
+
+    public int mehThreshold;
+    public int psychedThreshold;
 
     public Sprite psyched;
     public Sprite meh;
@@ -30,20 +34,22 @@ public class MoodDisplay : MonoBehaviour
 
     IEnumerator DisplayMessage (int points) {
         // set mood
-        if (points < 5) {
+        if (points < mehThreshold) {
             mood_text.text = "Mood: Bummed";
+            animator.SetTrigger("roundEnd");
+            animator.SetInteger("mood", 0);
             pet.GetComponent<SpriteRenderer>().sprite = bummed;
         }
-        else if (points < 10) {
+        else if (points < psychedThreshold) {
             mood_text.text = "Mood: Meh";
-            pet.GetComponent<SpriteRenderer>().sprite = meh;
-        }
-        else if (points< 15) {
-            mood_text.text = "Mood: Happy";
-            pet.GetComponent<SpriteRenderer>().sprite = happy;
+            animator.SetTrigger("roundEnd");
+            animator.SetInteger("mood", 1);
+            pet.GetComponent<SpriteRenderer>().sprite = psyched;
         }
         else {
             mood_text.text = "Mood: Psyched";
+            animator.SetTrigger("roundEnd");
+            animator.SetInteger("mood", 2);
             pet.GetComponent<SpriteRenderer>().sprite = psyched;
         }
 
