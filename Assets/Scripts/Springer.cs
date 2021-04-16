@@ -8,6 +8,8 @@ public class Springer : MonoBehaviour
     AudioSource audioSource;
 
     public float launchForce;
+    public float launchAdditive = 0f;
+    private float launchAdditiveMax = 3f;
     public float downTime, pressTime = 0;
 
     public GameObject pinball;
@@ -24,35 +26,32 @@ public class Springer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (triggered)
-        {
-            if (Input.GetKeyDown("space"))
+        if (Input.GetKeyUp("space"))
+        {   
+            if (triggered == true)
             {
-                downTime = Time.time;
-                StartCoroutine(MoveDown());
-            }
-
-            if (Input.GetKeyUp("space"))
-            {
-
-                StopCoroutine(MoveDown());
-                pressTime = Time.time - downTime;
-                pinballBody.AddForce(Vector3.up * launchForce * pressTime * 0.3f, ForceMode2D.Impulse);
-                transform.localPosition = new Vector3(2.5f, -4.475f, 1f);
-                transform.localScale = new Vector3(0.8f, 1f, 1f);
+                pinballBody.AddForce(Vector3.up * (launchForce + launchAdditive), ForceMode2D.Impulse);
                 triggered = false;
-
             }
-        } 
+
+            else
+            {
+                launchAdditive = 0f;
+            }
+        }
+
+        if (Input.GetKey("space") && launchAdditive <= launchAdditiveMax)
+        {
+            launchAdditive = launchAdditive + 0.01f;
+        }
        
     }
 
-
     void OnTriggerStay2D(Collider2D collidedObject)
     {
-        if (collidedObject.gameObject.tag == "Pinball" && Input.GetKey("space")) {
+        if (collidedObject.gameObject.tag == "Pinball" && !triggered) {
             print("ball registered!");
-            pinballBody.AddForce(Vector3.up * launchForce, ForceMode2D.Impulse);
+            triggered = true;
         }
     }
 
@@ -60,14 +59,6 @@ public class Springer : MonoBehaviour
     {
         triggered = false;
         audioSource.Play();
-    }
-
-
-    IEnumerator MoveDown()
-    {
-        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y - 0.2f, transform.localPosition.z);
-        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y - 0.2f, transform.localScale.z);
-        yield return new WaitForSeconds(0.2f);
     }
 
 }

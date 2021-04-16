@@ -6,7 +6,7 @@ public class Pinball : MonoBehaviour
 {
 
     AudioSource audioSource;
-    Vector2 startingPosition;
+    public Vector2 startingPosition;
     Rigidbody2D rbd;
     SpriteRenderer spriteRenderer;
 
@@ -24,14 +24,15 @@ public class Pinball : MonoBehaviour
         rbd = this.GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+
+        this.transform.position = startingPosition;
+        rbd.velocity = Vector3.zero;
+        rbd.angularVelocity = 0f;
     }
 
     public void Reset() {
         Debug.Log("Called into Pinball");
-        // positon = startingPosition;
         this.transform.position = startingPosition;
-        rbd.velocity = new Vector3(0, 0, 0);
         round++;
 
         if(round == 1)

@@ -147,7 +147,12 @@ MonoBehaviour:
   bumperSpeed: 1000
   upDirection: 1
   key: 101
-  movesLeft: 25
+  usesText: {fileID: 0}
+  movesLeft: 0
+  round1Moves: 15
+  round2Moves: 10
+  round3Moves: 5
+  round4Moves: 25
 --- !u!82 &6141096607013486316
 AudioSource:
   m_ObjectHideFlags: 0

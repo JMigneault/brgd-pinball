@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class PointTracker : MonoBehaviour
 {
+    public LivesTracker livesTracker;
+
     private int points;
     private int cumulativePoints = 0;
 
+    public int bonusRoundThreshold;
+    public bool isBonusRoundAwarded = false;
+
     public void ResetPoints() {
-        cumulativePoints += points;
+        
         points = 0;
     }
 
     public void AddPoints(int newPoints) {
         this.points += newPoints;
-        Debug.Log("current points:" + points + gameObject.name);
+        this.cumulativePoints += newPoints;
+        if (cumulativePoints >= bonusRoundThreshold && !isBonusRoundAwarded)
+        {
+            print("bonus round awarded!");
+            isBonusRoundAwarded = true;
+        }
     }
 
     public int GetPoints() {

@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 83bc51036aee849dcbc409bbe0031ed0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RoseWithRounds.unity
     guid: 72b5c87b5f971ab4aad650cba8123fdc
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: cf566d36bdea5482285947fc927bcabb
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 5284cdd73fcc44f918b4baf0caa6a051
   m_configObjects: {}

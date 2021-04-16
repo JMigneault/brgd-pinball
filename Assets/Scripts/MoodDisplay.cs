@@ -18,6 +18,10 @@ public class MoodDisplay : MonoBehaviour
     public Sprite bummed;
     public Sprite happy;
 
+    public AudioSource psychedSource;
+    public AudioSource mehSource;
+    public AudioSource bummedSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +29,6 @@ public class MoodDisplay : MonoBehaviour
         mood_text.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     public void ShowMood(int points) {
         // display mood
         mood_text.gameObject.SetActive(true);
@@ -35,26 +38,44 @@ public class MoodDisplay : MonoBehaviour
     IEnumerator DisplayMessage (int points) {
         // set mood
         if (points < mehThreshold) {
-            mood_text.text = "Mood: Bummed";
+            //mood_text.text = "Mood: Bummed";
             animator.SetTrigger("roundEnd");
             animator.SetInteger("mood", 0);
             pet.GetComponent<SpriteRenderer>().sprite = bummed;
+            Invoke("playBummed", 1f);
         }
         else if (points < psychedThreshold) {
-            mood_text.text = "Mood: Meh";
+            //mood_text.text = "Mood: Meh";
             animator.SetTrigger("roundEnd");
             animator.SetInteger("mood", 1);
-            pet.GetComponent<SpriteRenderer>().sprite = psyched;
+            pet.GetComponent<SpriteRenderer>().sprite = meh;
+            Invoke("playMeh", 1f);
         }
         else {
-            mood_text.text = "Mood: Psyched";
+           // mood_text.text = "Mood: Psyched";
             animator.SetTrigger("roundEnd");
             animator.SetInteger("mood", 2);
             pet.GetComponent<SpriteRenderer>().sprite = psyched;
+            Invoke("playPsyched", 1f);
         }
 
         // display mood
         yield return new WaitForSeconds(3);
         mood_text.gameObject.SetActive(false);
+    }
+
+    void playPsyched()
+    {
+        psychedSource.Play();
+    }
+
+    void playMeh()
+    {
+        mehSource.Play();
+    }
+
+    void playBummed()
+    {
+        bummedSource.Play();
     }
 }

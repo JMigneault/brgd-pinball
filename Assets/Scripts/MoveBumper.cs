@@ -15,7 +15,12 @@ public class MoveBumper : MonoBehaviour
     public KeyCode key;
     public Text usesText; 
 
-    public int movesLeft = 10;
+    public int movesLeft;
+    public int round1Moves = 15;
+    public int round2Moves = 10;
+    public int round3Moves = 5;
+    public int round4Moves = 25;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,17 +32,23 @@ public class MoveBumper : MonoBehaviour
 
     void Update() {
 
-        if (Input.GetKeyDown(key) && movesLeft > 0) {
+        if (Input.GetKeyDown(key) && movesLeft > -1) {
             movesLeft--;
-            usesText.text = movesLeft.ToString();
-            //Debug.Log(movesLeft + " moves left on bumper: " + gameObject.name);
-            audioSource.Play();
+            if (movesLeft >= 0)
+            {
+                audioSource.Play();
+            }
         }
 
-        if (Input.GetKey(key) && movesLeft > 0) {
+        if (Input.GetKey(key) && movesLeft > -1) {
             ChangeMotorSpeed(bumperSpeed * upDirection, joint);
         } else {
             ChangeMotorSpeed(bumperSpeed * -upDirection, joint);
+        }
+
+        if(movesLeft >= 0)
+        {
+            usesText.text = movesLeft.ToString();
         }
     }
 
@@ -45,6 +56,26 @@ public class MoveBumper : MonoBehaviour
         JointMotor2D motor = joint.motor;
         motor.motorSpeed = newSpeed;
         joint.motor = motor;
+    }
+
+    public void setUses(int round)
+    {
+        if(round == 1)
+        {
+            movesLeft = round1Moves;
+        }
+        if(round == 2)
+        {
+            movesLeft = round2Moves;
+        }
+        if (round == 3)
+        {
+            movesLeft = round3Moves;
+        }
+        if (round == 4)
+        {
+            movesLeft = round4Moves;
+        }
     }
 
 }

@@ -16,13 +16,14 @@ public class Health : MonoBehaviour
     void Start()
     {
         maxHealth = tracker.GetLives();
+        hearts[hearts.Length-1].enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         health = tracker.GetLives();
-        for (int i = 0; i < hearts.Length; i++) {
+        for (int i = 0; i < hearts.Length-1; i++) {
 
             if (i < health) {
                 hearts[i].enabled = true;

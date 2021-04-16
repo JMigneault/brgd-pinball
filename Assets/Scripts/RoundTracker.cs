@@ -11,13 +11,20 @@ public class RoundTracker : MonoBehaviour
 
     public int[] movesPerRound;
 
-    private int currentRound = 0;
+    private int currentRound = 1;
+
+    public MoveBumper leftFlipper;
+    public MoveBumper rightFlipper;
+
+    public AudioSource musicSourceInitial;
+    public AudioSource musicSourceLoop;
+    private float initialMusicLength = 14.4f;
 
     void Start() {
         pointTracker = GetComponent<PointTracker>();
-        foreach (MoveBumper bumper in moveBumpers) {
-            bumper.movesLeft = movesPerRound[currentRound];
-        }
+        leftFlipper.setUses(currentRound);
+        rightFlipper.setUses(currentRound);
+        Invoke("PlayMusicLoop", initialMusicLength);
     }
 
 
@@ -25,17 +32,15 @@ public class RoundTracker : MonoBehaviour
     public void NextRound() {
         // go to next round
         currentRound++;
-        // display mood
-        moodDisplay.ShowMood(pointTracker.GetPoints());
+        leftFlipper.setUses(currentRound);
+        rightFlipper.setUses(currentRound);
         // reset # of points
         pointTracker.ResetPoints();
-        // set number of moves for the round
-        if (currentRound > movesPerRound.Length) {
-            Debug.LogErrorFormat("ERROR: number of moves allowed for round %i not specified.", currentRound);
-        }
-        foreach (MoveBumper bumper in moveBumpers) {
-            bumper.movesLeft = movesPerRound[currentRound];
-        }
+    }
+
+    void PlayMusicLoop()
+    {
+        musicSourceLoop.Play();
     }
 
 }
