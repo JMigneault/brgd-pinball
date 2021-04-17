@@ -10,8 +10,8 @@ public class MoodDisplay : MonoBehaviour
     public Text mood_text;
     public GameObject pet;
 
-    public int mehThreshold;
-    public int psychedThreshold;
+    public int mehThreshold = 15;
+    public int psychedThreshold = 30;
 
     public Sprite psyched;
     public Sprite meh;
