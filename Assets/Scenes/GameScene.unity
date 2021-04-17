@@ -6564,7 +6564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   livesTracker: {fileID: 340861236}
-  bonusRoundThreshold: 100
+  bonusRoundThreshold: 30
   isBonusRoundAwarded: 0
 --- !u!4 &340861238
 Transform:
@@ -12497,7 +12497,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779289254}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc75d8f3ca2128f4c9017729e29b8f6c, type: 3}
   m_Name: 
@@ -12506,8 +12506,8 @@ MonoBehaviour:
   animator: {fileID: 903473302}
   mood_text: {fileID: 779289257}
   pet: {fileID: 903473299}
-  mehThreshold: 15
-  psychedThreshold: 30
+  mehThreshold: 10
+  psychedThreshold: 25
   psyched: {fileID: 21300000, guid: 90ae59af646a84ab9bc34e8d97bc481d, type: 3}
   meh: {fileID: 21300000, guid: 6d9ce410bd2d7457b9cf07021917de1f, type: 3}
   bummed: {fileID: 21300000, guid: 698d6754cacd545c99f89916e0a0ccb4, type: 3}
@@ -14118,7 +14118,6 @@ GameObject:
   - component: {fileID: 903473307}
   - component: {fileID: 903473306}
   - component: {fileID: 903473305}
-  - component: {fileID: 903473304}
   m_Layer: 0
   m_Name: Pal
   m_TagString: Untagged
@@ -14306,31 +14305,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &903473304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903473299}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75d8f3ca2128f4c9017729e29b8f6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tracker: {fileID: 340861237}
-  animator: {fileID: 903473302}
-  mood_text: {fileID: 779289257}
-  pet: {fileID: 903473299}
-  mehThreshold: 15
-  psychedThreshold: 30
-  psyched: {fileID: 21300000, guid: 90ae59af646a84ab9bc34e8d97bc481d, type: 3}
-  meh: {fileID: 21300000, guid: 6d9ce410bd2d7457b9cf07021917de1f, type: 3}
-  bummed: {fileID: 21300000, guid: 698d6754cacd545c99f89916e0a0ccb4, type: 3}
-  happy: {fileID: 21300000, guid: f57936d3f0c284e4fa20bec5922b3ee7, type: 3}
-  psychedSource: {fileID: 903473307}
-  mehSource: {fileID: 903473306}
-  bummedSource: {fileID: 903473305}
 --- !u!82 &903473305
 AudioSource:
   m_ObjectHideFlags: 0

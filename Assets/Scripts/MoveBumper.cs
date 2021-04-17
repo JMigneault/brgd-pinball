@@ -17,7 +17,7 @@ public class MoveBumper : MonoBehaviour
 
     public int movesLeft;
     public int round1Moves = 15;
-    public int round2Moves = 10;
+    public int round2Moves = 5;
     public int round3Moves = 5;
     public int round4Moves = 25;
 
@@ -62,19 +62,19 @@ public class MoveBumper : MonoBehaviour
     {
         if(round == 1)
         {
-            movesLeft = round1Moves;
+            movesLeft += round1Moves;
         }
         if(round == 2)
         {
-            movesLeft = round2Moves;
+            movesLeft += round2Moves;
         }
         if (round == 3)
         {
-            movesLeft = round3Moves;
+            movesLeft += round3Moves;
         }
         if (round == 4)
         {
-            movesLeft = round4Moves;
+            movesLeft += round4Moves;
         }
     }
 

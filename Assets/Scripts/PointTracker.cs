@@ -20,7 +20,7 @@ public class PointTracker : MonoBehaviour
     public void AddPoints(int newPoints) {
         this.points += newPoints;
         this.cumulativePoints += newPoints;
-        if (cumulativePoints >= bonusRoundThreshold && !isBonusRoundAwarded)
+        if (cumulativePoints/3 >= bonusRoundThreshold && !isBonusRoundAwarded)
         {
             print("bonus round awarded!");
             isBonusRoundAwarded = true;
