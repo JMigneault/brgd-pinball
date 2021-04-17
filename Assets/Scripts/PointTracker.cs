@@ -12,8 +12,17 @@ public class PointTracker : MonoBehaviour
     public int bonusRoundThreshold;
     public bool isBonusRoundAwarded = false;
 
-    public void ResetPoints() {
-        
+    void Start() {
+        PlayerPrefs.SetInt("r1Score", 0);
+        PlayerPrefs.SetInt("r2Score", 0);
+        PlayerPrefs.SetInt("r3Score", 0);
+        PlayerPrefs.SetInt("r4Score", 0);
+
+    }
+
+    public void ResetPoints(int round) {
+        Debug.Log("Set var: " + "r" + round + "Score" + " to score: " + points);
+        PlayerPrefs.SetInt("r" + round + "Score", points);
         points = 0;
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LivesTracker : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class LivesTracker : MonoBehaviour
 
     private RoundTracker roundTracker;
     private PointTracker pointTracker;
-    
+
+    public float gameEndWait = 2.0f;    
 
     void Start() {
         pointTracker = GetComponent<PointTracker>();
@@ -21,6 +23,7 @@ public class LivesTracker : MonoBehaviour
         remainingLives = startingLives;
         Debug.Log("setting remaining lives in start");
     }
+
 
     public int LoseLife() {
         if (remainingLives > 0) {
@@ -42,8 +45,9 @@ public class LivesTracker : MonoBehaviour
                     // TODO: you lose :(
                     Debug.Log("YOU LOSE!");
                     // this is so that points for final round are added to cumulative count, lots of other ways we could do this
-                    pointTracker.ResetPoints();
+                    pointTracker.ResetPoints(roundTracker.GetCurrentRound());
                     Debug.Log(pointTracker.GetCumulativePoints());
+                    StartCoroutine(GameEnd());
                 }
             }
             else {
@@ -57,6 +61,11 @@ public class LivesTracker : MonoBehaviour
 
     public int GetLives() {
         return remainingLives;
+    }
+
+    IEnumerator GameEnd() {
+        yield return new WaitForSeconds(gameEndWait);
+        SceneManager.LoadScene("GameOver");
     }
 
 }

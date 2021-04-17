@@ -34,13 +34,17 @@ public class RoundTracker : MonoBehaviour
         currentRound++;
         leftFlipper.setUses(currentRound);
         rightFlipper.setUses(currentRound);
-        // reset # of points
-        pointTracker.ResetPoints();
+        // save reset # of points
+        pointTracker.ResetPoints(currentRound-1);
     }
 
     void PlayMusicLoop()
     {
         musicSourceLoop.Play();
+    }
+
+    public int GetCurrentRound() {
+        return currentRound;
     }
 
 }
