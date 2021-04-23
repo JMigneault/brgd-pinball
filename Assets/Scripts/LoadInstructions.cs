@@ -12,10 +12,10 @@ public class LoadInstructions : MonoBehaviour
 
     public void Show() {
         if (instructions.active) {
-            instructions.SetActive(false);
             cabinet.SetActive(true);
             left.SetActive(true);
             right.SetActive(true);
+            instructions.SetActive(false);
 
         } else {
             instructions.SetActive(true);

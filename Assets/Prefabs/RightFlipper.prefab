@@ -150,7 +150,7 @@ MonoBehaviour:
   usesText: {fileID: 0}
   movesLeft: 0
   round1Moves: 15
-  round2Moves: 10
+  round2Moves: 5
   round3Moves: 5
   round4Moves: 25
 --- !u!82 &6141096607013486316
