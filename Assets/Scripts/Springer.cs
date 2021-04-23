@@ -31,6 +31,7 @@ public class Springer : MonoBehaviour
             if (triggered == true)
             {
                 pinballBody.AddForce(Vector3.up * (launchForce + launchAdditive), ForceMode2D.Impulse);
+                audioSource.Play();
                 triggered = false;
             }
 
@@ -58,7 +59,7 @@ public class Springer : MonoBehaviour
     void OnTriggerExit2D(Collider2D collidedObject)
     {
         triggered = false;
-        audioSource.Play();
+        
     }
 
 }
