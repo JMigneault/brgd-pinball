@@ -11,6 +11,7 @@ public class PointTracker : MonoBehaviour
 
     public int bonusRoundThreshold;
     public bool isBonusRoundAwarded = false;
+    public AudioSource bonusRoundSource;
 
     void Start() {
         PlayerPrefs.SetInt("r1Score", 0);
@@ -33,6 +34,7 @@ public class PointTracker : MonoBehaviour
         {
             print("bonus round awarded!");
             isBonusRoundAwarded = true;
+
         }
     }
 

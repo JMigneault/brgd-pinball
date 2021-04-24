@@ -33,6 +33,7 @@ public class LivesTracker : MonoBehaviour
                 if(pointTracker.isBonusRoundAwarded && !isBonusRoundPlayed)
                 {
                     print("bonus round!");
+                    pointTracker.bonusRoundSource.Play();
                     remainingLives = 1;
                     ballDisplay.hearts[0].enabled = false;
                     ballDisplay.hearts[0] = ballDisplay.hearts[ballDisplay.hearts.Length - 1];
